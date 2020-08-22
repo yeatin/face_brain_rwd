@@ -109,8 +109,7 @@ class App extends Component {
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    console.log(clarifyFace)
-    console.log(width, height)
+    console.log(data.outputs[0].data.regions[0].region_info)
     return {
       leftCol: clarifyFace.left_col * width,
       topRow: clarifyFace.top_row * height,
