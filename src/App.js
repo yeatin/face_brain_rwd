@@ -54,7 +54,7 @@ const ParticlesSetting = {
 const initialState = {
   input: '',
   imageUrl: '',
-  box: {},
+  boxes: [],
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -105,21 +105,23 @@ class App extends Component {
   }
 
   calculateFaceLocation = (data) => {
-    const clarifyFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const faces = data.outputs[0].data.regions;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    console.log(data.outputs[0].data.regions[0].region_info)
-    return {
-      leftCol: clarifyFace.left_col * width,
-      topRow: clarifyFace.top_row * height,
-      rightCol: width * (1 - clarifyFace.right_col),
-      bottomRow: height * (1 - clarifyFace.bottom_row)
-    }
+    return faces.map(face => {
+      let clarifyFace = face.region_info.bounding_box;
+      return {
+        leftCol: clarifyFace.left_col * width,
+        topRow: clarifyFace.top_row * height,
+        rightCol: width * (1 - clarifyFace.right_col),
+        bottomRow: height * (1 - clarifyFace.bottom_row)
+      }
+    })
   }
 
-  displayFaceBox = (box) => {
-    this.setState({ box: box });
+  displayFaceBox = (boxes) => {
+    this.setState({ boxes: boxes });
   }
 
   onRouteChange = (route) => {
@@ -144,7 +146,7 @@ class App extends Component {
   }
 
   render() {
-    const { imageUrl, box, route, isSignedIn } = this.state;
+    const { imageUrl, boxes, route, isSignedIn } = this.state;
     return (
       <div className="App">
         <Particles className='particles' params={ParticlesSetting} />
@@ -153,11 +155,11 @@ class App extends Component {
             ? <div>
               <Navigation style={{ zIndex: 0 }} onRouteChange={this.onRouteChange} isSignedIn={isSignedIn} />
               <Logo />
-              <Rank name={this.state.user.name} entries={this.state.user.entries} />
+              <Rank name={this.state.user.name} entries={this.state.user.entries} boxes={this.state.boxes} />
               <ImageLinkForm
                 onInputChange={this.onInputChange}
                 onButtonSubmit={this.onButtonSubmit} />
-              <FaceRecognition box={box} imageUrl={imageUrl} />
+              <FaceRecognition boxes={boxes} imageUrl={imageUrl} />
             </div>
             : (
               route === 'signin'
