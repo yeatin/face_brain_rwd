@@ -106,7 +106,7 @@ class App extends Component {
 
   calculateFaceLocation = (data) => {
     const faces = data.outputs[0].data.regions;
-    const image = document.getElementById('inputimage');
+    const image = document.getElementById('inputImage');
     const width = Number(image.width);
     const height = Number(image.height);
     return faces.map(face => {
