@@ -50,7 +50,7 @@ class SignIn extends React.Component {
                 <main className="pa4-l pa2 black-80">
                     <div className="measure">
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                            <legend className="f1-l f5 fw6 ph1 mh0">Sign In</legend>
+                            <legend className="f1-l f2 fw6 ph1 mh0"></legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                                 <input
