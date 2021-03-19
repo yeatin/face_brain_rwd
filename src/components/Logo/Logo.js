@@ -5,7 +5,7 @@ import './Logo.css';
 
 const Logo = () => {
     return (
-        <div className='mb1-l mb4 ml5-l ml6 mt0'>
+        <div className='mb1-l mb4 ml5-l mt0'>
             <Tilt className="Tilt ml4 br2 shadow-2 w4-l w3" options={{ max: 50 }}>
                 <div className="Tilt-inner">
                     <img src= {logo} alt= 'logo'/>
