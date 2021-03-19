@@ -1,5 +1,4 @@
 import React from 'react';
-
 class SignIn extends React.Component {
 
     constructor(props) {
@@ -47,11 +46,11 @@ class SignIn extends React.Component {
     render() {
         const { onRouteChange } = this.props;
         return (
-            <article className="br3 ba b--black-20 mv4 w-20 w-50-m w-25-l shadow-5 mw6 center" style={{ position: 'relative', zIndex: 1 }}>
-                <main className="pa4 black-80">
+            <article className="br3 ba b--black-20 mt5 shadow-5 center w-25-l w-75 " style={{ position: 'relative', zIndex: 1 }}>
+                <main className="pa4-l pa2 black-80">
                     <div className="measure">
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                            <legend className="f1 fw6 ph0 mh0">Sign In</legend>
+                            <legend className="f1-l f2 fw6 ph1 mh0">Sign In</legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                                 <input
@@ -71,7 +70,7 @@ class SignIn extends React.Component {
                                 />
                             </div>
                         </fieldset>
-                        <div className="">
+                        <div className="phone">
                             <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                                 type="submit"
                                 onClick={this.onSubmitSignIn}

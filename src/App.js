@@ -153,7 +153,7 @@ class App extends Component {
         {
           route === 'home'
             ? <div>
-              <Navigation style={{ zIndex: 0 }} onRouteChange={this.onRouteChange} isSignedIn={isSignedIn} />
+              <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn} />
               <Logo />
               <Rank name={this.state.user.name} entries={this.state.user.entries} boxes={this.state.boxes} />
               <ImageLinkForm

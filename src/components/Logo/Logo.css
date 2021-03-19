@@ -1,3 +1,5 @@
 .Tilt {
+    position: absolute;
+    z-index: 1;
     background: linear-gradient(-45deg, rgb(255, 169, 20), rgb(82, 148, 255))
 }
