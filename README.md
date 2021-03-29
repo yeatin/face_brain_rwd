@@ -1,7 +1,23 @@
-<<<<<<< HEAD
-This web app is capable of building a database of users and hashed passwords, featuring recognizing faces and recording the total number of faces in user profile. To deploy these files, go check on heroku deployment. The demo is put on the newer version: "smart_brain_2.0" https://github.com/yiting76/smart_brain_2.0
-=======
-This web app is capable of building a database of users and hashed passwords, featuring recognizing faces and recording the total number of faces in user profile.
-To deploy these files, go check on heroku deployment.
-The demo is put on the newer version: "smart_brain_2.0" https://github.com/yeatin/smart_brain_2.0
->>>>>>> 6412461937cbd498b52285dfb63bfcbc213af38c
+# Face Brain RWD
+This web app is a front-end and back-end web app with a database, holding registered user ids, emails, and registration date. Featuring faces-recognizing and keeping track of the number of submitte pictures in user profile. Each one of users has an unique user profile.
+The face-recognizing api is provied by **clarifai.com**.
+## Built With
+* React.js
+* PostgreSQL
+* Heroku
+* Express
+* tachyons
+* React-Particles-js
+* Clarifai
+* 
+## Skills Tree
+* React Hooks
+* API
+* Manifest
+## How to Use
+1. Go to https://face-brain-rwd.herokuapp.com/
+1. Sign Up with an email and password **(One email address can only register once and the password is uncahngeable)**
+1. Copy and Paste in the input with any **image address (image link)** you like
+1. Press the "Detect" button
+1. The picture you chose will show up with blue boxes on human faces that *Clarifai API* detects
+1. You can sign out and sign in with the email and password combination you created
