@@ -9,7 +9,6 @@ The face-recognizing api is provied by **clarifai.com**.
 * tachyons
 * React-Particles-js
 * Clarifai
-* 
 ## Skills Tree
 * React Hooks
 * API
