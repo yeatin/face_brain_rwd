@@ -6,7 +6,7 @@ The face-recognizing api is provied by **clarifai.com**.
 * PostgreSQL
 * Heroku
 * Express
-* tachyons
+* Tachyons
 * React-Particles-js
 * Clarifai
 ## Skills Tree
