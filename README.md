@@ -1,5 +1,5 @@
 # Face Brain RWD
-This web app is a front-end and back-end web app with a database, holding registered user ids, emails, and registration date. Featuring faces-recognizing and keeping track of the number of submitte pictures in user profile. Each one of users has an unique user profile.
+This web app is a front-end and back-end web app with a database, holding registered user ids, emails, and registration date. Featuring faces-recognizing and keeping track of the number of submitted pictures in user profile. Each one of users has an unique user profile.
 The face-recognizing api is provied by **clarifai.com**.
 ## Built With
 * React.js
