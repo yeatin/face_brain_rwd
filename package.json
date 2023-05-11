@@ -1,5 +1,5 @@
 {
-  "name": "facerecognitionapp",
+  "name": "face_brain_rwd",
   "homepage": "http://yeatin.github.io/face_brain_rwd/",
   "version": "0.1.0",
   "private": true,
@@ -17,8 +17,7 @@
     "tachyons": "^4.12.0"
   },
   "scripts": {
-    "start": "serve -s build",
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -78,7 +78,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch(' https://safe-earth-86770.herokuapp.com/imageurl', {
+    fetch(' https://face-brain-api-tdcf.onrender.com/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ input: this.state.input })
@@ -86,7 +86,7 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         if (data.status) {
-          fetch(' https://safe-earth-86770.herokuapp.com/image', {
+          fetch(' https://face-brain-api-tdcf.onrender.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: this.state.user.id })
