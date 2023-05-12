@@ -1,5 +1,5 @@
 # Face Brain RWD
-This web app is a frontend and backend web app with a database, holding registered user ids, emails, and registration date. Featuring faces-recognizing and keeping track of the number of submitted pictures. Every user has an unique user profile.
+It is a frontend and backend web app with a database, holding registered user ids, emails, and registration date. Featuring faces-recognizing and keeping track of the number of submitted pictures. Every user has an unique user profile.
 The face-recognizing api is provied by **clarifai.com**.
 ## Backend Server Github Repositary
 https://github.com/yeatin/face_brain_api
