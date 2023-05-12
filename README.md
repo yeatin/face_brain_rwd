@@ -3,15 +3,11 @@ This web app is a frontend and backend web app with a database, holding register
 The face-recognizing api is provied by **clarifai.com**.
 ## Built With
 * React.js
-* PostgreSQL
-* Express
 * Tachyons
 * React-Particles-js
 * Clarifai
 ## Hosted On
-* Database -> <supabase.com>
 * Frontend -> GitHub Pages
-* Backend -> <render.com>
 ## How to Use
 1. Go to https://yeatin.github.io/face_brain_rwd/
 1. Sign Up with an email and password **(One email address can only register once and the password is uncahngeable)**
