@@ -78,7 +78,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch(' https://face-brain-api-tdcf.onrender.com/imageurl', {
+    fetch('https://face-brain-api-lbzt.onrender.com/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ input: this.state.input })
@@ -86,10 +86,10 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         if (data.status) {
-          fetch(' https://face-brain-api-tdcf.onrender.com/image', {
+          fetch('https://face-brain-api-lbzt.onrender.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: this.state.user.id })
+            body: JSON.stringify({ id: this.state.user.id, boxesNum: data.outputs[0].data.regions.length })
           })
             .then(data => data.json())
             .then(count => this.setState(Object.assign(this.state.user, { entries: count })))
